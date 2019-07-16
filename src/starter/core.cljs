@@ -8,10 +8,10 @@
 
 (defn core []
   [:div.Main
-    [:p {:on-click #(handle-state-change "update-state-text" "New Text")} "Click to update state text"]
+    [:p {:on-click #(handle-state-change {:type "update-state-text" :value "Test Text Here"})} "Click to update state text"]
     [textbox/render (:text @app-state)]
     [page/render (:example-page (:active-page @app-state))]
-    [:h3 {:on-click #(handle-state-change "update-active-view" "example-page")} "click me to open a new page"]])
+    [:h3 {:on-click #(handle-state-change {:type "update-active-view" :value "example-page"})} "click me to open a new page"]])
 
 (reagent/render-component [core]
                           (. js/document (getElementById "app")))
