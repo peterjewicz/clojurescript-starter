@@ -2,7 +2,8 @@
     (:require [reagent.core :as reagent :refer [atom]]
               [starter.components.textbox :as textbox]
               [starter.views.page :as page]
-              [starter.services.state :refer [app-state handle-state-change]]))
+              [starter.services.state.global :refer [app-state]]
+              [starter.services.state.dispatcher :refer [handle-state-change]]))
 
 (enable-console-print!)
 

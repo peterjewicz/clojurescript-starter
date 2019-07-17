@@ -1,4 +1,4 @@
-(ns starter.services.textstate)
+(ns starter.services.state.textstate)
 
 (defn update-state-text [app-state payload]
   "example of updating the state based on the payload"
